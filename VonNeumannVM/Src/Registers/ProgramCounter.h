@@ -2,9 +2,9 @@
 
 #include "../stdafx.h"
 
-#include "Register.h"
+#include "InputRegister.h"
 
-class ProgramCounter : public Register
+class ProgramCounter : public InputRegister
 {
 public:
 	ProgramCounter();

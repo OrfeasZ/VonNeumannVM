@@ -36,9 +36,6 @@
     <ClInclude Include="Src\ALU.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Accumulator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Src\CPU.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -54,13 +51,16 @@
     <ClInclude Include="Src\Registers\ProgramCounter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Registers\Register.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Registers\IRegister.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Registers\InstructionRegister.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Registers\Accumulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Registers\InputRegister.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Registers\OutputRegister.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,9 +83,6 @@
     <ClCompile Include="Src\ALU.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Accumulator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Src\CPU.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -95,7 +92,13 @@
     <ClCompile Include="Src\Registers\ProgramCounter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Registers\Register.cpp">
+    <ClCompile Include="Src\Registers\Accumulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Registers\InputRegister.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Registers\OutputRegister.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -80,25 +80,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Src\Accumulator.h" />
+    <ClInclude Include="Src\Registers\Accumulator.h" />
     <ClInclude Include="Src\Registers\AddressRegister.h" />
     <ClInclude Include="Src\ALU.h" />
     <ClInclude Include="Src\ControlUnit.h" />
     <ClInclude Include="Src\CPU.h" />
     <ClInclude Include="Src\Registers\DataRegister.h" />
     <ClInclude Include="Src\Registers\InstructionRegister.h" />
-    <ClInclude Include="Src\Registers\IRegister.h" />
     <ClInclude Include="Src\Memory.h" />
     <ClInclude Include="Src\Multiplexer.h" />
     <ClInclude Include="Src\OpcodeConverter.h" />
     <ClInclude Include="Src\Operation.h" />
+    <ClInclude Include="Src\Registers\OutputRegister.h" />
     <ClInclude Include="Src\Registers\ProgramCounter.h" />
-    <ClInclude Include="Src\Registers\Register.h" />
+    <ClInclude Include="Src\Registers\InputRegister.h" />
     <ClInclude Include="Src\VM.h" />
     <ClInclude Include="Src\stdafx.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Src\Accumulator.cpp" />
+    <ClCompile Include="Src\Registers\Accumulator.cpp" />
     <ClCompile Include="Src\ALU.cpp" />
     <ClCompile Include="Src\ControlUnit.cpp" />
     <ClCompile Include="Src\CPU.cpp" />
@@ -106,8 +106,9 @@
     <ClCompile Include="Src\Multiplexer.cpp" />
     <ClCompile Include="Src\OpcodeConverter.cpp" />
     <ClCompile Include="Src\Operation.cpp" />
+    <ClCompile Include="Src\Registers\OutputRegister.cpp" />
     <ClCompile Include="Src\Registers\ProgramCounter.cpp" />
-    <ClCompile Include="Src\Registers\Register.cpp" />
+    <ClCompile Include="Src\Registers\InputRegister.cpp" />
     <ClCompile Include="Src\VM.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

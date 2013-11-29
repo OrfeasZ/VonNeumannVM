@@ -2,12 +2,10 @@
 
 #include "../stdafx.h"
 
-#include "IRegister.h"
-
-class Register : public IRegister
+class InputRegister
 {
 public:
-	Register();
+	InputRegister();
 
 public:
 	void SetEnable(bool p_Enabled);
