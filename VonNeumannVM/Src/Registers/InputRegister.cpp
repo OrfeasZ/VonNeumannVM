@@ -10,3 +10,14 @@ void InputRegister::SetEnable(bool p_Enabled)
 {
 	m_EN = p_Enabled;
 }
+
+bool InputRegister::Write(unsigned short p_Data)
+{
+	// Check if we're allowed to write.
+	if (!m_EN)
+		return false;
+
+	m_Data = p_Data;
+
+	return true;
+}

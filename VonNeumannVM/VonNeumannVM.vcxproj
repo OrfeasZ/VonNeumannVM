@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -91,6 +91,7 @@
     <ClInclude Include="Src\Multiplexer.h" />
     <ClInclude Include="Src\OpcodeConverter.h" />
     <ClInclude Include="Src\Operation.h" />
+    <ClInclude Include="Src\Registers\IRegister.h" />
     <ClInclude Include="Src\Registers\OutputRegister.h" />
     <ClInclude Include="Src\Registers\ProgramCounter.h" />
     <ClInclude Include="Src\Registers\InputRegister.h" />
@@ -106,6 +107,7 @@
     <ClCompile Include="Src\Multiplexer.cpp" />
     <ClCompile Include="Src\OpcodeConverter.cpp" />
     <ClCompile Include="Src\Operation.cpp" />
+    <ClCompile Include="Src\Registers\DataRegister.cpp" />
     <ClCompile Include="Src\Registers\OutputRegister.cpp" />
     <ClCompile Include="Src\Registers\ProgramCounter.cpp" />
     <ClCompile Include="Src\Registers\InputRegister.cpp" />

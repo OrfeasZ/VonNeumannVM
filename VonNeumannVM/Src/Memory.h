@@ -14,6 +14,7 @@ public:
 
 	void SetChipSelect(bool p_Enabled);
 	void SetOutputEnable(bool p_Enabled);
+	void SetReadWrite(bool p_ReadWrite);
 
 public:
 	inline bool GetChipSelect() { return m_ME_CS; }

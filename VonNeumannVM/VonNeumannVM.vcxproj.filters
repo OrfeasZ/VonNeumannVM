@@ -63,6 +63,9 @@
     <ClInclude Include="Src\Registers\OutputRegister.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Registers\IRegister.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Memory.cpp">
@@ -99,6 +102,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Src\Registers\OutputRegister.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Registers\DataRegister.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -2,7 +2,9 @@
 
 #include "../stdafx.h"
 
-class OutputRegister
+#include "IRegister.h"
+
+class OutputRegister : protected IRegister
 {
 public:
 	OutputRegister();
@@ -10,6 +12,8 @@ public:
 public:
 	void SetOutputEnable(bool p_Enabled);
 	bool GetOutputEnable() { return m_OE; }
+
+	bool Read(unsigned short& p_Data);
 
 protected:
 	bool m_OE;
