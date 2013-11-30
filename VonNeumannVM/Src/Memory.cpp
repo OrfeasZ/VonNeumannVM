@@ -2,7 +2,7 @@
 
 #include <stdlib.h>
 
-Memory::Memory(unsigned int p_Cells)
+Memory::Memory(uint16_t p_Cells)
 	: m_ME_CS(false), m_ME_OE(false), m_ME_RW(false)
 {
 	// We currently don't support a memory with a capacity of over 16kb
@@ -10,7 +10,7 @@ Memory::Memory(unsigned int p_Cells)
 		throw;
 
 	// Allocate the required memory
-	m_MemoryCells = (unsigned short*)malloc(p_Cells);
+	m_MemoryCells = (uint16_t*)malloc(p_Cells);
 	m_Size = p_Cells;
 }
 
@@ -20,7 +20,7 @@ Memory::~Memory()
 	free(m_MemoryCells);
 }
 
-bool Memory::Read(unsigned int p_Index, unsigned short& p_Data)
+bool Memory::Read(uint16_t p_Index, uint16_t& p_Data)
 {
 	// Check if the chip is enabled
 	if (!m_ME_CS)
@@ -43,7 +43,7 @@ bool Memory::Read(unsigned int p_Index, unsigned short& p_Data)
 	return true;
 }
 
-bool Memory::Write(unsigned int p_Index, unsigned short p_Data)
+bool Memory::Write(uint16_t p_Index, uint16_t p_Data)
 {
 	// Check if the chip is enabled
 	if (!m_ME_CS)

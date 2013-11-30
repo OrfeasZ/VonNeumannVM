@@ -11,10 +11,10 @@ public:
 	void SetEnable(bool p_Enabled);
 	bool GetEnable() { return m_EN; }
 
-	bool Write(unsigned short p_Data);
+	bool Write(uint16_t p_Data);
 
 protected:
 	bool m_EN;
 
-	unsigned short m_Data;
+	uint16_t m_Data;
 };

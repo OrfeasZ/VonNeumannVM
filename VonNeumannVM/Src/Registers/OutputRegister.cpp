@@ -11,7 +11,7 @@ void OutputRegister::SetOutputEnable(bool p_Enabled)
 	m_OE = p_Enabled;
 }
 
-bool OutputRegister::Read(unsigned short& p_Data)
+bool OutputRegister::Read(uint16_t& p_Data)
 {
 	// Check if we're allowed to read.
 	if (!m_OE)

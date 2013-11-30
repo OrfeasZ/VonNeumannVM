@@ -5,12 +5,12 @@
 class Memory
 {
 public:
-	Memory(unsigned int p_Cells = 8192);
+	Memory(uint16_t p_Cells = 8192);
 	~Memory();
 
 public:
-	bool Read(unsigned int p_Index, unsigned short& p_Data);
-	bool Write(unsigned int p_Index, unsigned short p_Data);
+	bool Read(uint16_t p_Index, uint16_t& p_Data);
+	bool Write(uint16_t p_Index, uint16_t p_Data);
 
 	void SetChipSelect(bool p_Enabled);
 	void SetOutputEnable(bool p_Enabled);
@@ -22,8 +22,8 @@ public:
 	inline bool GetReadWrite() { return m_ME_RW; }
 
 private:
-	unsigned short* m_MemoryCells;
-	unsigned int m_Size;
+	uint16_t* m_MemoryCells;
+	uint16_t m_Size;
 
 private:
 	bool m_ME_CS;

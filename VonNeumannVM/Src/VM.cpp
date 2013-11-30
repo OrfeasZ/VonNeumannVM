@@ -14,7 +14,7 @@ int main()
 
 	s_Memory.Write(0, Operation(JUMPZ, 1583).GetData());
 
-	unsigned short s_Data;
+	uint16_t s_Data;
 	s_Memory.Read(0, s_Data);
 	Operation s_NewOperation(s_Data);
 
