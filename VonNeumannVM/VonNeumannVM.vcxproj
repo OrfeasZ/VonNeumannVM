@@ -80,6 +80,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Src\ITickable.h" />
     <ClInclude Include="Src\Registers\Accumulator.h" />
     <ClInclude Include="Src\Registers\AddressRegister.h" />
     <ClInclude Include="Src\ALU.h" />

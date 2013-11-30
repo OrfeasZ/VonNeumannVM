@@ -3,6 +3,7 @@
 
 #include "Operation.h"
 #include "Memory.h"
+#include "ALU.h"
 
 int main()
 {
@@ -19,6 +20,16 @@ int main()
 
 
 	printf("%X %X %X\n", s_NewOperation.GetData(), s_NewOperation.GetOpcode(), s_NewOperation.GetAddress());
+
+
+	ALU s_ALU;
+
+	s_ALU.Tick();
+
+	s_ALU.SetFunction0(true);
+	s_ALU.SetFunction1(true);
+
+	s_ALU.Tick();
 
 	for(;;);
 
