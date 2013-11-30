@@ -23,10 +23,9 @@ public:
 
 public:
 	Accumulator* GetAccumulator();
-
+	ALU* GetALU();
 
 private:
 	Accumulator m_Accumulator;
-
-
+	ALU m_ALU;
 };

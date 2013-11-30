@@ -5,7 +5,7 @@
 class Memory
 {
 public:
-	Memory(unsigned int p_Cells);
+	Memory(unsigned int p_Cells = 8192);
 	~Memory();
 
 public:

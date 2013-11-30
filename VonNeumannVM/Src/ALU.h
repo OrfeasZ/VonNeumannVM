@@ -3,7 +3,6 @@
 #include "stdafx.h"
 
 #include "ITickable.h"
-#include "CPU.h"
 
 class ALU
 {

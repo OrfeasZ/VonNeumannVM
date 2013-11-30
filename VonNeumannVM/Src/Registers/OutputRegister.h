@@ -2,9 +2,9 @@
 
 #include "../stdafx.h"
 
-#include "IRegister.h"
+#include "InputRegister.h"
 
-class OutputRegister : protected IRegister
+class OutputRegister : public InputRegister
 {
 public:
 	OutputRegister();

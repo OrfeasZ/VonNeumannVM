@@ -2,9 +2,7 @@
 
 #include "../stdafx.h"
 
-#include "IRegister.h"
-
-class InputRegister : protected IRegister
+class InputRegister
 {
 public:
 	InputRegister();
@@ -17,4 +15,6 @@ public:
 
 protected:
 	bool m_EN;
+
+	unsigned short m_Data;
 };

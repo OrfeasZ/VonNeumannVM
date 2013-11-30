@@ -63,9 +63,6 @@
     <ClInclude Include="Src\Registers\OutputRegister.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Registers\IRegister.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Src\ITickable.h">
       <Filter>Header Files</Filter>
     </ClInclude>

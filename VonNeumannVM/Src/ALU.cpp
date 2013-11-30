@@ -1,5 +1,7 @@
 #include "ALU.h"
 
+#include "CPU.h"
+
 ALU::ALU()
 	: m_F0(false), m_F1(false), m_F2(false),
 	  m_InputA(0), m_InputB(0)

@@ -2,10 +2,9 @@
 
 #include "../stdafx.h"
 
-#include "InputRegister.h"
 #include "OutputRegister.h"
 
-class DataRegister : public InputRegister, public OutputRegister
+class DataRegister : public OutputRegister
 {
 public:
 	DataRegister();

@@ -92,7 +92,6 @@
     <ClInclude Include="Src\Multiplexer.h" />
     <ClInclude Include="Src\OpcodeConverter.h" />
     <ClInclude Include="Src\Operation.h" />
-    <ClInclude Include="Src\Registers\IRegister.h" />
     <ClInclude Include="Src\Registers\OutputRegister.h" />
     <ClInclude Include="Src\Registers\ProgramCounter.h" />
     <ClInclude Include="Src\Registers\InputRegister.h" />
