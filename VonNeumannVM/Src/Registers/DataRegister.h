@@ -10,7 +10,7 @@ public:
 	DataRegister();
 
 public:
-	bool GetDirection() { return m_DR_DI; }
+	virtual bool GetDirection() { return m_DR_DI; }
 	void SetDirection(bool p_Direction);
 
 private:

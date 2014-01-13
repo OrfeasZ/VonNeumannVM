@@ -1,6 +1,6 @@
 #include "Accumulator.h"
 
-#include "../CPU.h"
+#include "../VM.h"
 
 Accumulator::Accumulator()
 {
@@ -13,12 +13,6 @@ void Accumulator::Tick()
 	if (!m_EN)
 		return;
 
-	// Check if we are allowed to output data.
-	if (!m_OE)
-		return;
-
 	// Write our data to Input B of the ALU.
-	CPU::GetInstance()->GetALU()->WriteInputB(m_Data);
-
-	// TODO: Send data to the internal data bus
+	VM::GetInstance()->GetCPU()->GetALU()->WriteInputB(m_Data);
 }

@@ -57,13 +57,22 @@
     <ClInclude Include="Src\Registers\Accumulator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Registers\InputRegister.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Registers\OutputRegister.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Src\ITickable.h">
+    <ClInclude Include="Src\DataBus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Interfaces\ITickable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Interfaces\IWriteable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Interfaces\IReadable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Registers\Register.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -98,13 +107,22 @@
     <ClCompile Include="Src\Registers\Accumulator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Registers\InputRegister.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Registers\OutputRegister.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Src\Registers\DataRegister.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VonNeumannVM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Registers\InstructionRegister.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DataBus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Registers\Register.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

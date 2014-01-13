@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../stdafx.h"
-#include "../ITickable.h"
+#include "../Interfaces/ITickable.h"
 
 #include "OutputRegister.h"
 

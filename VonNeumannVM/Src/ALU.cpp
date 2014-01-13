@@ -1,6 +1,6 @@
 #include "ALU.h"
 
-#include "CPU.h"
+#include "VM.h"
 
 ALU::ALU()
 	: m_F0(false), m_F1(false), m_F2(false),
@@ -24,14 +24,21 @@ void ALU::SetFunction2(bool p_Value)
 	m_F2 = p_Value;
 }
 
-void ALU::WriteInputA(uint16_t p_Value)
+bool ALU::Write(uint16_t p_Value)
 {
 	m_InputA = p_Value;
+	return true;
 }
 
 void ALU::WriteInputB(uint16_t p_Value)
 {
 	m_InputB = p_Value;
+}
+
+bool ALU::CanWrite()
+{
+	// TODO: Implement this
+	return true;
 }
 
 void ALU::Tick()
@@ -49,11 +56,12 @@ void ALU::Tick()
 		s_Result &= m_InputB;
 		break;
 	case Complement:
-		CPU::GetInstance()->GetAccumulator()->Read(s_Result);
+		VM::GetInstance()->GetCPU()->GetAccumulator()->Read(s_Result);
 		s_Result = ~s_Result;
+		s_Result &= 0x1FFF;
 		break;
 	case RightShift:
-		CPU::GetInstance()->GetAccumulator()->Read(s_Result);
+		VM::GetInstance()->GetCPU()->GetAccumulator()->Read(s_Result);
 		s_Result >>= 1;
 		break;
 	case NoOp:
@@ -62,5 +70,5 @@ void ALU::Tick()
 		break;
 	}
 
-	CPU::GetInstance()->GetAccumulator()->Write(s_Result);
+	VM::GetInstance()->GetCPU()->GetAccumulator()->Write(s_Result);
 }

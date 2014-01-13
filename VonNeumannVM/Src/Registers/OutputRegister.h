@@ -2,9 +2,9 @@
 
 #include "../stdafx.h"
 
-#include "InputRegister.h"
+#include "Register.h"
 
-class OutputRegister : public InputRegister
+class OutputRegister : public Register
 {
 public:
 	OutputRegister();
@@ -13,7 +13,7 @@ public:
 	void SetOutputEnable(bool p_Enabled);
 	bool GetOutputEnable() { return m_OE; }
 
-	bool Read(uint16_t& p_Data);
+	bool CanRead() { return m_OE; }
 
 protected:
 	bool m_OE;

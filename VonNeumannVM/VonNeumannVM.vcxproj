@@ -20,14 +20,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v110</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v110</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -80,7 +80,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Src\ITickable.h" />
+    <ClInclude Include="Src\DataBus.h" />
+    <ClInclude Include="Src\Interfaces\IReadable.h" />
+    <ClInclude Include="Src\Interfaces\ITickable.h" />
+    <ClInclude Include="Src\Interfaces\IWriteable.h" />
     <ClInclude Include="Src\Registers\Accumulator.h" />
     <ClInclude Include="Src\Registers\AddressRegister.h" />
     <ClInclude Include="Src\ALU.h" />
@@ -94,11 +97,12 @@
     <ClInclude Include="Src\Operation.h" />
     <ClInclude Include="Src\Registers\OutputRegister.h" />
     <ClInclude Include="Src\Registers\ProgramCounter.h" />
-    <ClInclude Include="Src\Registers\InputRegister.h" />
+    <ClInclude Include="Src\Registers\Register.h" />
     <ClInclude Include="Src\VM.h" />
     <ClInclude Include="Src\stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Src\DataBus.cpp" />
     <ClCompile Include="Src\Registers\Accumulator.cpp" />
     <ClCompile Include="Src\ALU.cpp" />
     <ClCompile Include="Src\ControlUnit.cpp" />
@@ -108,9 +112,11 @@
     <ClCompile Include="Src\OpcodeConverter.cpp" />
     <ClCompile Include="Src\Operation.cpp" />
     <ClCompile Include="Src\Registers\DataRegister.cpp" />
+    <ClCompile Include="Src\Registers\InstructionRegister.cpp" />
     <ClCompile Include="Src\Registers\OutputRegister.cpp" />
     <ClCompile Include="Src\Registers\ProgramCounter.cpp" />
-    <ClCompile Include="Src\Registers\InputRegister.cpp" />
+    <ClCompile Include="Src\Registers\Register.cpp" />
+    <ClCompile Include="Src\VonNeumannVM.cpp" />
     <ClCompile Include="Src\VM.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
