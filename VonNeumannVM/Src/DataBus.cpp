@@ -19,7 +19,7 @@ uint16_t DataBus::Read()
 {
 	uint16_t s_Data = 0;
 
-	for (auto it = m_Readables.begin(); it != m_Readables.end(); ++it)
+	for (std::list<IReadable*>::iterator it = m_Readables.begin(); it != m_Readables.end(); ++it)
 	{
 		if (!(*it)->CanRead())
 			continue;
@@ -27,7 +27,7 @@ uint16_t DataBus::Read()
 		(*it)->Read(s_Data);
 	}
 
-	for (auto it = m_DataRegisters.begin(); it != m_DataRegisters.end(); ++it)
+	for (std::map<DataRegister*, bool>::iterator it = m_DataRegisters.begin(); it != m_DataRegisters.end(); ++it)
 	{
 		if (it->first->GetDirection() != it->second)
 			continue;
@@ -45,7 +45,7 @@ void DataBus::Tick()
 {
 	uint16_t s_Data = Read();
 
-	for (auto it = m_Writeables.begin(); it != m_Writeables.end(); ++it)
+	for (std::list<IWriteable*>::iterator it = m_Writeables.begin(); it != m_Writeables.end(); ++it)
 	{
 		if (!(*it)->CanWrite())
 			continue;
@@ -53,7 +53,7 @@ void DataBus::Tick()
 		(*it)->Write(s_Data);
 	}
 
-	for (auto it = m_DataRegisters.begin(); it != m_DataRegisters.end(); ++it)
+	for (std::map<DataRegister*, bool>::iterator it = m_DataRegisters.begin(); it != m_DataRegisters.end(); ++it)
 	{
 		if (it->first->GetDirection() == it->second)
 			continue;

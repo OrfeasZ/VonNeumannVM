@@ -1,6 +1,7 @@
 #include "Memory.h"
 
 #include <stdlib.h>
+#include <string.h>
 
 Memory::Memory(uint16_t p_Cells)
 	: m_ME_CS(false), m_ME_OE(false), m_ME_RW(false)

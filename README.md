@@ -61,10 +61,6 @@ This little program will load the data from address 0x0100 of the Main Memory to
 
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
- 
-### Notes
-
- - This VM has only been tested on Windows using the msvc110 compiler.
 
 
   [1]: https://github.com/OrfeasZ

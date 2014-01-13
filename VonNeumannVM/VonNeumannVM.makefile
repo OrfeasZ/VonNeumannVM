@@ -33,7 +33,7 @@ build_all_configurations: Debug Release
 # Builds the Debug configuration...
 .PHONY: Debug
 Debug: create_folders gccDebug/Src/DataBus.o gccDebug/Src/Registers/Accumulator.o gccDebug/Src/ALU.o gccDebug/Src/ControlUnit.o gccDebug/Src/CPU.o gccDebug/Src/Memory.o gccDebug/Src/Multiplexer.o gccDebug/Src/OpcodeConverter.o gccDebug/Src/Operation.o gccDebug/Src/Registers/DataRegister.o gccDebug/Src/Registers/InstructionRegister.o gccDebug/Src/Registers/OutputRegister.o gccDebug/Src/Registers/ProgramCounter.o gccDebug/Src/Registers/Register.o gccDebug/Src/VonNeumannVM.o gccDebug/Src/VM.o 
-	g++ gccDebug/Src/DataBus.o gccDebug/Src/Registers/Accumulator.o gccDebug/Src/ALU.o gccDebug/Src/ControlUnit.o gccDebug/Src/CPU.o gccDebug/Src/Memory.o gccDebug/Src/Multiplexer.o gccDebug/Src/OpcodeConverter.o gccDebug/Src/Operation.o gccDebug/Src/Registers/DataRegister.o gccDebug/Src/Registers/InstructionRegister.o gccDebug/Src/Registers/OutputRegister.o gccDebug/Src/Registers/ProgramCounter.o gccDebug/Src/Registers/Register.o gccDebug/Src/VonNeumannVM.o gccDebug/Src/VM.o  $(Debug_Library_Path) $(Debug_Libraries) -Wl,-rpath,./ -o ../bin/gccDebug/VonNeumannVM.exe
+	g++ gccDebug/Src/DataBus.o gccDebug/Src/Registers/Accumulator.o gccDebug/Src/ALU.o gccDebug/Src/ControlUnit.o gccDebug/Src/CPU.o gccDebug/Src/Memory.o gccDebug/Src/Multiplexer.o gccDebug/Src/OpcodeConverter.o gccDebug/Src/Operation.o gccDebug/Src/Registers/DataRegister.o gccDebug/Src/Registers/InstructionRegister.o gccDebug/Src/Registers/OutputRegister.o gccDebug/Src/Registers/ProgramCounter.o gccDebug/Src/Registers/Register.o gccDebug/Src/VonNeumannVM.o gccDebug/Src/VM.o  $(Debug_Library_Path) $(Debug_Libraries) -Wl,-rpath,./ -o ../bin/gccDebug/VonNeumannVM
 
 # Compiles file Src/DataBus.cpp for the Debug configuration...
 -include gccDebug/Src/DataBus.d
@@ -134,7 +134,7 @@ gccDebug/Src/VM.o: Src/VM.cpp
 # Builds the Release configuration...
 .PHONY: Release
 Release: create_folders gccRelease/Src/DataBus.o gccRelease/Src/Registers/Accumulator.o gccRelease/Src/ALU.o gccRelease/Src/ControlUnit.o gccRelease/Src/CPU.o gccRelease/Src/Memory.o gccRelease/Src/Multiplexer.o gccRelease/Src/OpcodeConverter.o gccRelease/Src/Operation.o gccRelease/Src/Registers/DataRegister.o gccRelease/Src/Registers/InstructionRegister.o gccRelease/Src/Registers/OutputRegister.o gccRelease/Src/Registers/ProgramCounter.o gccRelease/Src/Registers/Register.o gccRelease/Src/VonNeumannVM.o gccRelease/Src/VM.o 
-	g++ gccRelease/Src/DataBus.o gccRelease/Src/Registers/Accumulator.o gccRelease/Src/ALU.o gccRelease/Src/ControlUnit.o gccRelease/Src/CPU.o gccRelease/Src/Memory.o gccRelease/Src/Multiplexer.o gccRelease/Src/OpcodeConverter.o gccRelease/Src/Operation.o gccRelease/Src/Registers/DataRegister.o gccRelease/Src/Registers/InstructionRegister.o gccRelease/Src/Registers/OutputRegister.o gccRelease/Src/Registers/ProgramCounter.o gccRelease/Src/Registers/Register.o gccRelease/Src/VonNeumannVM.o gccRelease/Src/VM.o  $(Release_Library_Path) $(Release_Libraries) -Wl,-rpath,./ -o ../bin/gccRelease/VonNeumannVM.exe
+	g++ gccRelease/Src/DataBus.o gccRelease/Src/Registers/Accumulator.o gccRelease/Src/ALU.o gccRelease/Src/ControlUnit.o gccRelease/Src/CPU.o gccRelease/Src/Memory.o gccRelease/Src/Multiplexer.o gccRelease/Src/OpcodeConverter.o gccRelease/Src/Operation.o gccRelease/Src/Registers/DataRegister.o gccRelease/Src/Registers/InstructionRegister.o gccRelease/Src/Registers/OutputRegister.o gccRelease/Src/Registers/ProgramCounter.o gccRelease/Src/Registers/Register.o gccRelease/Src/VonNeumannVM.o gccRelease/Src/VM.o  $(Release_Library_Path) $(Release_Libraries) -Wl,-rpath,./ -o ../bin/gccRelease/VonNeumannVM
 
 # Compiles file Src/DataBus.cpp for the Release configuration...
 -include gccRelease/Src/DataBus.d
@@ -236,9 +236,17 @@ gccRelease/Src/VM.o: Src/VM.cpp
 .PHONY: create_folders
 create_folders:
 	mkdir -p gccDebug/source
+	mkdir -p gccDebug/Src
+	mkdir -p gccDebug/Src/Registers
 	mkdir -p ../bin/gccDebug
+	mkdir -p ../bin/gccDebug/Src
+	mkdir -p ../bin/gccDebug/Src/Registers
 	mkdir -p gccRelease/source
+	mkdir -p gccRelease/Src
+	mkdir -p gccRelease/Src/Registers
 	mkdir -p ../bin/gccRelease
+	mkdir -p ../bin/gccRelease/Src
+	mkdir -p ../bin/gccRelease/Src/Registers
 
 # Cleans intermediate and output files (objects, libraries, executables)...
 .PHONY: clean
@@ -249,10 +257,12 @@ clean:
 	rm -f ../bin/gccDebug/*.so
 	rm -f ../bin/gccDebug/*.dll
 	rm -f ../bin/gccDebug/*.exe
+	rm -f ../bin/gccDebug/VonNeumannVM
 	rm -f gccRelease/*.o
 	rm -f gccRelease/*.d
 	rm -f ../bin/gccRelease/*.a
 	rm -f ../bin/gccRelease/*.so
 	rm -f ../bin/gccRelease/*.dll
 	rm -f ../bin/gccRelease/*.exe
+	rm -f ../bin/gccRelease/VonNeumannVM
 

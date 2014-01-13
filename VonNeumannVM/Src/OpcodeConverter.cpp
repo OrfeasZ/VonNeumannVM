@@ -134,7 +134,7 @@ std::string OpcodeConverter::OpcodeConvert(Opcode p_Data)
 
 std::vector<Operation> OpcodeConverter::ConvertFile(const std::string& p_File)
 {
-	std::ifstream s_File(p_File);
+	std::ifstream s_File(p_File.c_str());
 	std::string s_Line;
 
 	std::vector<Operation> s_Operations;

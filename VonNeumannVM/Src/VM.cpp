@@ -36,7 +36,7 @@ void VM::Start(const std::string& p_Input)
 {
 	if (p_Input.size() > 0)
 	{
-		auto s_Operations = OpcodeConverter::ConvertFile(p_Input);
+		std::vector<Operation> s_Operations = OpcodeConverter::ConvertFile(p_Input);
 
 		for (int i = 0; i < s_Operations.size(); ++i)
 		{
