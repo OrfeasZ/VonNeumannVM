@@ -47,6 +47,21 @@ After the VM is running, you have several options:
     
 This little program will load the data from address 0x0100 of the Main Memory to the Accumulator, it will add to it the data on address 0x0101, and then save the result to address 0x0102. 
  
+### License
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
 ### Notes
 
  - This VM has only been tested on Windows using the msvc110 compiler.
